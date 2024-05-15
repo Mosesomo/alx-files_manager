@@ -1,13 +1,11 @@
 const express = require('express');
-
-const port = parseInt(process.env.PORT, 10) || 5000;
-
 const app = express();
+const routes = require('./routes');
 
-app.use('/', router);
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-    console.log(`server running on port ${port}`);
+app.use('/', routes);
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-
-export default app;
