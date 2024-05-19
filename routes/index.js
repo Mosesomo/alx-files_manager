@@ -1,9 +1,9 @@
-const express = require('express');
+import { Router } from 'express';
 
 const router = Router();
 const AppController = require('../controllers/AppController');
 const UsersController = require('../controllers/UsersController');
-const AuthController = require('../conroller/AuthController');
+const AuthController = require('../controllers/AuthController');
 
 router.get('/status', AppController.getStatus);
 router.get('/stats', AppController.getStats);
